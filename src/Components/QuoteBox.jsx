@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 const Card = ({randomQuote, randomColor, btnChange}) => {
 
@@ -15,7 +16,10 @@ const Card = ({randomQuote, randomColor, btnChange}) => {
           <i className="fa-solid fa-quote-left" style={quoteStyle}></i>
              <p className='quote__content' style={quoteStyle}>{randomQuote.quote}</p>
              <p className='quote__author' style={quoteStyle}>{randomQuote.author}</p>
-          <button onClick={btnChange} className='btn' style={buttonStyle}>&#62;</button>
+         <Button
+           btnChange={btnChange}
+           buttonStyle={buttonStyle}
+         />
       </div>
     </div>
   )
